@@ -1,0 +1,18 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      # Mount the frontend source code for hot-reloading
+      - ./frontend:/app
+      # Use an anonymous volume to prevent the host's node_modules from overwriting the container's
+      - /app/node_modules
+    env_file:
+      # The user must create this file based on .env.example
+      - ./frontend/.env
+    # Keep the container running
+    stdin_open: true
+    tty: true
