@@ -56,14 +56,14 @@
 ```
 
 ## 構成
-- Frontend: Next.js Static Export → Cloud Storage
+- Frontend: React + Vite → Cloud Storage
 - Backend: Cloud Functions（スケジュール実行のみ）
 - Database: Firestore（直接クライアントアクセス）
 - Auth: Firebase Auth
 
 ## 技術スタック
 - Frontend
-  - Next.js Static Export
+  - React + Vite
 - 状態管理
   - React Context + useReducer
 - UI Library
